@@ -6,7 +6,7 @@ Installation
 ```
 composer require namdevel/codashop
 ```
-Game code list
+GAME LIST
 ------------
 ```php
 use Namdevel\Codashop;
@@ -14,7 +14,7 @@ require(__DIR__ . '/vendor/autoload.php');
 
 echo $app->gameList();
 ```
-Check Username by Game ID
+CHECK
 ------------
 ```php
 use Namdevel\Codashop;
