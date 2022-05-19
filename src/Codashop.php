@@ -3,25 +3,26 @@ namespace Namdevel;
 
 class Codashop
 {
-	const API_URL = "https://public-api.namdevel.rest";
-	
-	public function checkUser($game_code, $user_id, $zone_id=null){
-		
-		$field = array(
-			'game_code' => (string) $game_code,
-			'user_id' => (string) $user_id,
-			'zone_id' => (string) $zone_id
-		);
-		
-		return self::request(self::API_URL . "/v1/init/username", $field);
-	}
-	
-	public function gameList()
-	{
-		return self::request(self::API_URL . "/v1/game_list/explore");
-	}
-	
-	protected function request($url, $post = false, $headers = false)
+    const API_URL = "https://public-api.namdevel.rest";
+    
+    public function checkUser($game_code, $user_id, $zone_id = null)
+    {
+        
+        $field = array(
+            'game_code' => (string) $game_code,
+            'user_id' => (string) $user_id,
+            'zone_id' => (string) $zone_id
+        );
+        
+        return self::request(self::API_URL . "/v1/init/username", $field);
+    }
+    
+    public function gameList()
+    {
+        return self::request(self::API_URL . "/v1/game_list/explore");
+    }
+    
+    protected function request($url, $post = false, $headers = false)
     {
         $ch = curl_init();
         
